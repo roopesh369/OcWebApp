@@ -107,10 +107,10 @@ bnDiff = tbnPEcoi - tbnCEcoi
 bnPcr = abs(tbnPEcoi / tbnCEcoi)
 # st.write(niftyOC)
 # st.write(bniftyOC)
-st.write("NIFTY", niftyrows)
+#st.write("NIFTY", niftyrows)
 st.write("Total CE.coi = ", tnCEcoi, "Total PE.coi = ", tnPEcoi, "Diff = ", nDiff)
 st.write("PCR = ", nPcr)
 
-st.write("BANK NIFTY", bniftyrows)
+#st.write("BANK NIFTY", bniftyrows)
 st.write("Total CE.coi = ", tbnCEcoi, "Total PE.coi = ", tbnPEcoi, "Diff = ", bnDiff)
 st.write("PCR = ", bnPcr)
