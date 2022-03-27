@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 import streamlit as st
-import time
+
 
 url1 = 'https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY'
 url2 = 'https://www.nseindia.com/api/option-chain-indices?symbol=BANKNIFTY'
@@ -76,7 +76,6 @@ def calPCR(ocdata, indx):
             'PE.oi': putoi, 'PE.coi': putcoi, 'PE.vol': putvol
         }
         data.append(idata)
-        print("In loop ", data)
         i = i + 1
     resultdata = pd.DataFrame(data)
     return (resultdata)
