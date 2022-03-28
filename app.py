@@ -13,13 +13,11 @@ headers = {
 session = requests.Session()
 request = session.get(url1, headers=headers)
 cookies = dict(request.cookies)
-response1 = session.get(url1, headers=headers).json()
-#response1 = session.get(url1, headers=headers, cookies=cookies).json()
+response1 = session.get(url1, headers=headers, cookies=cookies).json()
 NiftyAllE = pd.DataFrame(response1)
 NiftyNE = pd.DataFrame(NiftyAllE['filtered']['data']).fillna(0)
 
-#response2 = session.get(url2, headers=headers, cookies=cookies).json()
-response2 = session.get(url2, headers=headers).json()
+response2 = session.get(url2, headers=headers, cookies=cookies).json()
 BNiftyAllE = pd.DataFrame(response2)
 BNiftyNE = pd.DataFrame(BNiftyAllE['filtered']['data']).fillna(0)
 
